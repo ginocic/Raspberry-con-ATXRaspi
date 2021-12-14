@@ -33,10 +33,6 @@ sudo bash shutdownchecksetup.sh
 ```
 Premere <kbd>ENTER</kbd> per installare lo script basato su INTERRUPT e riavviare.
 ```bash
-sudo reboot
-```
-
-```bash
 sudo rm shutdownchecksetup.sh
 sudo reboot
 ```
@@ -44,7 +40,10 @@ sudo reboot
 Questi comandi installeranno uno script bash (`/etc/shutdowncheck`) che sará eseguito al termine del processo di boot aggiungendo una linea a `/etc/rc.local`. Una volta riavviato il Raspberry, lo script dovrebbe partire e dovrebbe mostrare il messaggio (se il sistema non avvia una sessione grafica):
 
 ```
-ATXRaspi shutdowncheck script started: asserted pins (7=input,LOW; 8=output,HIGH). Waiting for GPIO7 to become HIGH…
+==========================================================================================
+   ATXRaspi shutdown IRQ script started: asserted pins (",SHUTDOWN, "=input,LOW; ",BOOT,"=output,HIGH)
+   Waiting for GPIO", SHUTDOWN, "to become HIGH (short HIGH pulse=REBOOT, long HIGH=SHUTDOWN)...
+==========================================================================================
 ```
 
 Questo indica che lo script è in esecuzione e attende un segnale di spegnimento dall'ATXRaspi.
