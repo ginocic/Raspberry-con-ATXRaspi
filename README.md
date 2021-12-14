@@ -30,6 +30,13 @@ Seguire la foto seguente per le connessioni tra il Raspberry e l'ATXRaspi:
 ```bash
 sudo wget https://raw.githubusercontent.com/LowPowerLab/ATX-Raspi/master/shutdownchecksetup.sh
 sudo bash shutdownchecksetup.sh
+```
+Premere <kbd>ENTER</kbd> per installare lo script basato su INTERRUPT e riavviare.
+```bash
+sudo reboot
+```
+
+```bash
 sudo rm shutdownchecksetup.sh
 sudo reboot
 ```
