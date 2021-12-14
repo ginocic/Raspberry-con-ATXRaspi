@@ -39,7 +39,7 @@ sudo reboot
 
 Questi comandi installeranno uno script bash (`/etc/shutdowncheck`) che sará eseguito al termine del processo di boot aggiungendo una linea a `/etc/rc.local`. Una volta riavviato il Raspberry, lo script dovrebbe partire e dovrebbe mostrare il messaggio (se il sistema non avvia una sessione grafica):
 
-```
+```console
 ==========================================================================================
    ATXRaspi shutdown IRQ script started: asserted pins (",SHUTDOWN, "=input,LOW; ",BOOT,"=output,HIGH)
    Waiting for GPIO", SHUTDOWN, "to become HIGH (short HIGH pulse=REBOOT, long HIGH=SHUTDOWN)...
