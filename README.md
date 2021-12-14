@@ -21,3 +21,5 @@ Qui viene eseguita l'assemblaggio, installazione e configurazione del Modulo ATX
 Per ulteriori modalitá e/o caratteristiche, fare riferimento alla [guida ufficiale](https://lowpowerlab.com/guide/atxraspi/?view=all) dal sito ufficiale.
 
 # Fase 1 - Connessione al Raspberry
+Seguire la foto seguente per le connessioni tra il Raspberry e l'ATXRaspi:
+![Connessioni](img/connessioni.png)
