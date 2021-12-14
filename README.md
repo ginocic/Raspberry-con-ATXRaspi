@@ -45,5 +45,11 @@ Si dovrebbe essere in grado di avviare, riavviare e spegnere il Raspberry dal pu
 
 ## Fase 3 - Spegnimento completo da software
 > **Nota**: Lo spegnimento da software funziona **SOLTANTO** con il pulsante momentaneo. **NON FUNZIONA** con interruttori o pulsanti a scatto!!!
+
 Avendo seguito lo schema delle connessioni dalla foto precedente, la parte hardware è giá pronta.
+Creare lo script da lanciare quando si vorrá spegnere o riavviare
+
+```bash
+sudo nano /usr/local/bin/softshutdown.sh
+```
 
