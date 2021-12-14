@@ -27,18 +27,18 @@ Seguire la foto seguente per le connessioni tra il Raspberry e l'ATXRaspi:
 ![Connessioni](img/connessioni.png)
 
 ## Fase 2 - Installazione dello script necessario
-'''bash
+```bash
 sudo wget https://raw.githubusercontent.com/LowPowerLab/ATX-Raspi/master/shutdownchecksetup.sh
 sudo bash shutdownchecksetup.sh
 sudo rm shutdownchecksetup.sh
 sudo reboot
-'''
+```
 
 Questi comandi installeranno uno script bash (`/etc/shutdowncheck`) che sará eseguito al termine del processo di boot aggiungendo una linea a `/etc/rc.local`. Una volta riavviato il Raspberry, lo script dovrebbe partire e dovrebbe mostrare il messaggio (se il sistema non avvia una sessione grafica):
 
-'''
+```
 ATXRaspi shutdowncheck script started: asserted pins (7=input,LOW; 8=output,HIGH). Waiting for GPIO7 to become HIGH…
-'''
+```
 
 Questo indica che lo script è in esecuzione e attende un segnale di spegnimento dall'ATXRaspi.
 
