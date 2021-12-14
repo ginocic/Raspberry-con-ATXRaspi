@@ -53,3 +53,43 @@ Creare lo script da lanciare quando si vorrá spegnere o riavviare
 sudo nano /usr/local/bin/softshutdown.sh
 ```
 
+Copiare nel file appena creato il codice seguente
+```
+#!/bin/bash
+BUTTON=10
+
+#setup GPIO 10 as output and set to HIGH
+echo "$BUTTON" > /sys/class/gpio/export;
+echo "out" > /sys/class/gpio/gpio$BUTTON/direction
+echo "1" > /sys/class/gpio/gpio$BUTTON/value
+
+#keep GPIO 10 high for at least 4 seconds for shutdown, 1s for reboot (same as pressing ATXRaspi button)
+SLEEP=${1:-4} #default to 4 seconds if no delay value was passed
+
+re='^[0-9\.]+$'
+if ! [[ $SLEEP =~ $re ]] ; then
+   echo "error: sleep time not a number" >&2; exit 1
+fi
+
+echo "ATXRaspi button press for: $SLEEP seconds..."
+/bin/sleep $SLEEP
+
+#restore GPIO 10
+echo "0" > /sys/class/gpio/gpio$BUTTON/value
+```
+
+Rendere il file eseguibile
+```bash
+sudo chmod +x softshutdown.sh
+```
+
+Verificare che i permessi del file siano corretti
+```bash
+cd /usr/local/bin
+ls -la softshutdown.sh
+```
+il risultato di questi comandi dovrebbere essere qualcosa del genere:
+```
+pi@raspberry:/usr/local/bin $ ls -la softshutdown.sh
+-rwxr-xr-x  1 root staff  580 Dec 29 17:59 softshutdown.sh
+```
