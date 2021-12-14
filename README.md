@@ -44,6 +44,6 @@ Questo indica che lo script è in esecuzione e attende un segnale di spegnimento
 Si dovrebbe essere in grado di avviare, riavviare e spegnere il Raspberry dal pulsante d'alimentazione.
 
 ## Fase 3 - Spegnimento completo da software
-> **Nota**: Lo spegnimento da software funziona solo con il pulsante momentaneo. NON FUNZIONA con interruttori o pulsanti a scatto!!!
+> **Nota**: Lo spegnimento da software funziona **SOLTANTO** con il pulsante momentaneo. **NON FUNZIONA** con interruttori o pulsanti a scatto!!!
 Avendo seguito lo schema delle connessioni dalla foto precedente, la parte hardware è giá pronta.
 
