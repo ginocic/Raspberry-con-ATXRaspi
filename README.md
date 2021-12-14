@@ -41,8 +41,8 @@ Questi comandi installeranno uno script bash (`/etc/shutdowncheck`) che sará es
 
 ```console
 ==========================================================================================
-   ATXRaspi shutdown IRQ script started: asserted pins (",SHUTDOWN, "=input,LOW; ",BOOT,"=output,HIGH)
-   Waiting for GPIO", SHUTDOWN, "to become HIGH (short HIGH pulse=REBOOT, long HIGH=SHUTDOWN)...
+   ATXRaspi shutdown IRQ script started: asserted pins ( 7 =input,LOW; 8 =output,HIGH)
+   Waiting for GPIO 7 to become HIGH (short HIGH pulse=REBOOT, long HIGH=SHUTDOWN)...
 ==========================================================================================
 ```
 
