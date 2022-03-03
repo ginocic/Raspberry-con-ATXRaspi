@@ -86,12 +86,12 @@ echo "0" > /sys/class/gpio/gpio$BUTTON/value
 
 Rendere il file eseguibile
 ```bash
+cd /usr/local/bin
 sudo chmod +x softshutdown.sh
 ```
 
 Verificare che i permessi del file siano corretti
 ```bash
-cd /usr/local/bin
 ls -la softshutdown.sh
 ```
 il risultato di questi comandi dovrebbere essere qualcosa del genere:
